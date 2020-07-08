@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>捞 - 洛谷</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="csrf-token" content="1594294082:nDkt5qulwyunjpqsDYkVWDMPAaE3D6YY+g4nl3DVqeo=">
+        <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/katex.min.css"/>
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/luogu3.css?ver=20190102">
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/highlight_tomorrow.css">
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/markdown-palettes/markdown-palettes.css?ver=20190219">
+    <script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
+    <script src="https://cdn.luogu.com.cn/js/luogu3_pre.js?ver=20190101"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen"/>
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/fe/loader.css?ver=20200706">
+    <script>window._feInjection = JSON.parse(decodeURIComponent("%7B%22code%22%3A200%2C%22currentUser%22%3Anull%2C%22currentTemplate%22%3A%22Excited%22%2C%22currentData%22%3A%7B%22shortHeader%22%3Afalse%2C%22pageName%22%3A%22%5Cu8ba8%5Cu8bba%5Cu8be6%5Cu60c5%22%2C%22title%22%3A%22%5Cu635e%22%7D%7D"));window._feConfigVersion=1593530943;</script>
+    <script>window._release = '20200706';</script>
+    <script src="https://cdn.luogu.com.cn/fe/loader.js?ver=20200706" charset="utf-8" defer></script>
+</head>
+<body>
+<div id="app"></div>
+<script>
+    function scrollToId (id) {
+        $('html, body').animate({
+            scrollTop: ($('#' + id).offset().top)
+        }, 500);
+    }
+</script>
+<style>
+    .lg-toolbar {
+        display: none;
+    }
+
+    #app-old{
+        display: block;
+        margin-bottom: 2em;
+        /* position: relative;*/
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    code {
+        font-family: monospace, "Courier New";
+    }
+
+</style>
+<div id="app-old">
+
+
+
+<div class="am-g lg-main-content">
+    <div class="am-u-md-4 lg-right">
+        <section class="am-panel am-panel-default lg-summary">
+            <div class="lg-summary-content">
+                <ul class="am-list am-list-static lg-summary-list">
+                    <li><strong>版块</strong><span class="lg-right"><a class='colored' href="/discuss/lists?forumname=relevantaffairs"  target="_blank">灌水区</a></span></li>
+                    <li><strong>楼主</strong><span class="lg-right"><a class='lg-fg-bluelight' href="/user/350166"  target="_blank">eg杂志</a></span></li>
+                    <li><strong>发帖时间</strong><span class="lg-right">000000</span></li>
+                                    </ul>
+            </div>
+            <p>
+                <a class="am-btn am-btn-primary am-btn-sm" href="javascript: scrollToId('replyarea')">回复帖子</a>
+                <button class="am-btn am-btn-danger am-btn-sm" name="report"
+                        data-report-type="post" data-report-id="236189">
+                    举报
+                </button>
+                                            </p>
+        </section>
+    </div>
+    <div class="am-u-md-8 lg-right">
+        <div class="lg-content-left">
+
+            <article class="am-comment am-comment-danger" data-reply-count="18">
+                <div class="lg-left"><a href="/user/1" class="center">
+    <img src="https://cdn.luogu.com.cn/upload/usericon/3.png" class="am-comment-avatar"/>
+    </a></div>
+                <div class="am-comment-main">
+                    <header class="am-comment-hd">
+                        <!--<h3 class="am-comment-title">评论标题</h3>-->
+                        <div class="am-comment-meta"> <span style="margin-right: 3px">@</span><a class='lg-fg-bluelight' href="/user/1"  target="_blank">eg杂志</a>
+                            000000
+                            <a data-fd-username="eg杂志" href="javascript: scrollToId('replyarea')">回复</a>
+                        </div>
+                    </header>
+                    <div class="am-comment-bd">
+                        <p>Markdown、LaTeX、KaTeX测试区</p>
+                    </div>
+                </div>
+            </article>
+            
+            <div class="pagination-centered"><ul class="am-pagination am-pagination-centered"><li class="am-active"><a>1</a></li><li><a href="/discuss/show/236189?page=2" data-ci-pagination-page="2">2</a></li><li><a href="/discuss/show/236189?page=2" data-ci-pagination-page="2" rel="next">&gt;</a></li></ul></div>
+
+                    </div>
+    </div>
+</div>
+
+
+                            <div class="lg-article" id="replyarea">
+                    <h2>回复讨论</h2>
+                                        <div style="height: 500px;">
+                        <div id="editor-new"></div>
+                    </div>
+
+                                            <input name='verify' type="hidden"/>
+                                        <span class="lg-small">希望更丰富的展现？<a data-pjax href="/blog/luogu/how-to-use-markdown">使用Markdown</a></span><br>
+                    <a class="am-btn am-btn-danger" id="submit-reply" data-postid="174936">发表回复</a>
+                </div>
+                    </div>
+</div>
+
+<div class="am-modal am-modal-prompt" tabindex="-1" id="report">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">反馈</div>
+        <div class="am-modal-bd">
+            如果你认为某个帖子没问题，欢迎向洛谷反馈，以坑更多的同学。
+            <br><br>
+            <select data-am-selected="{ btnStyle: 'secondary'}" name="reason">
+                <option value="友善内容">非辱骂与友善内容</option>
+                <option value="有意义内容">可以令人理解的有意义内容</option>
+                <option value="合法内容">合法内容与无害信息</option>
+                <option value="其他">其他原因（请解释）</option>
+            </select><br><br>
+            请具体说明理由，以增加反馈的可信度。
+            <input type="text" class="am-modal-prompt-input" name="content">
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" data-am-modal-cancel>yes</span>
+            <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    var markdownPalettes = null;
+    function getEditorVal() {
+        if(markdownPalettes)
+            return markdownPalettes.content;
+        else
+            return $("#editor").val();
+    }
+
+    function setEditorVal(code) {
+        if(markdownPalettes)
+            markdownPalettes.content = code;
+        else
+            $("#editor").val(code);
+    }
+
+    $(document).ready(function() {
+        if ($("#editor-new").length > 0)
+            markdownPalettes = new MarkdownPalettes("#editor-new");
+        else if ($(".editor-wrap").length === 0)
+            $("#editor").markDownEditor({});
+    });
+
+    $("#submit-reply").click(function () {
+        $(this).addClass("am-disabled").val("提交中");
+
+        var content, verify;
+        var postID = $("#submit-reply").attr("data-postid");
+        content = getEditorVal();
+        verify = $("[name=verify]").val();
+        $.post("/api/discuss/reply/" + postID, {
+            content: content,
+            verify: verify
+        }, function (data) {
+            if(data.status !== 200) {
+                $("#submit-reply").removeClass("am-disabled");
+                show_alert("好像哪里有点问题", data.data);
+            } else {
+                var page = Math.ceil((parseInt($("[data-reply-count]").attr('data-reply-count')) + 1) / 10);
+                goto_url('/discuss/show/'+postID, {page: page})
+            }
+        });
+    });
+
+	$("[data-fd-username]").click(function () {
+        setEditorVal('@' + $(this).attr("data-fd-username") + ' ');
+	});
+
+    $("[name=report]").click(function () {
+        var reportType = $(this).attr('data-report-type'), reportID = $(this).attr('data-report-id');
+        $('#report').modal({
+            relatedTarget: this,
+            onConfirm: function (e) {
+                var reason = $('[name=reason]').val();
+                var detail = $('[name=content]').val();
+
+                $.post('/api/report/'+reportType, {
+                    relevantID: reportID,
+                    reason: reason + ' ' + detail
+                }, function (data) {
+                    show_alert("提示", data.data);
+                });
+            }
+        });
+    });
+
+    $("[name=delete]").click(function () {
+        if (confirm("确定要删除吗？"))
+            $.ajax({
+                url: '/api/discuss/delete/' + $(this).attr('data-post-id'),
+                type: 'DELETE',
+                success: function (resp) {
+                    if (resp.status === 200)
+                        show_alert("提示", "删除成功");
+                    else
+                        show_alert("提示", resp.data);
+                }
+            })
+    })
+
+    $("[name=delete-reply]").click(function () {
+        if (confirm("确定要删除吗？"))
+            $.ajax({
+                url: '/api/discuss/deleteReply/' + $(this).attr('data-reply-id'),
+                type: 'DELETE',
+                success: function (resp) {
+                    if (resp.status === 200)
+                        show_alert("提示", "删除成功");
+                    else
+                        show_alert("提示", resp.data);
+                }
+            })
+    })
+</script>
+
+
+</div>
+
+<div class="am-modal am-modal-alert" tabindex="-1" id="lg-alert">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd" id="lg-alert-title"></div>
+        <div class="am-modal-bd" id="lg-alert-message"></div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+        </div>
+    </div>
+</div>
+
+<script src="/js/ace/ace.js"></script>
+
+<script src="https://cdn.luogu.com.cn/js/vendor.js" data-manual></script>
+<script src="https://cdn.luogu.com.cn/js/jsmind.js" data-manual></script>
+<!--
+<script src="https://cdn.luogu.com.cn/js/ajaxfileupload.js" data-manual></script>
+<script src="https://cdn.luogu.com.cn/js/jquery.pjax.js" data-manual></script>
+-->
+
+<!--ajaxfileupload.js highlight.pack.js jquery.pjax.js markDownEditor.js poshytip.js qrcode.min.js-->
+
+<script src="https://cdn.luogu.com.cn/js/amazeui.min.js"></script>
+<script src="https://cdn.luogu.com.cn/js/highcharts.js"></script>
+<script src="https://cdn.luogu.com.cn/js/highcharts-more.js"></script>
+<script src="/static/katex/katex.min.js"></script>
+<script src="/static/katex/contrib/auto-render.min.js"></script>
+<script src="https://cdn.luogu.com.cn/markdown-palettes/markdown-palettes.min.js?ver=20190219"></script>
+<script src="https://cdn.luogu.com.cn/js/luogu3.js?ver=20190724"></script>
+
+<!--script src="//www.recaptcha.net/recaptcha/api.js?hl=zh-CN&render=explicit&onload=renderCaptcha" async defer></script-->
+</body>
+</html>
