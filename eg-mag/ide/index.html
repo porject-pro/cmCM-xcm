@@ -1,29 +1,539 @@
-
-<!DOCTYPE html>
-<html class="no-js" lang="zh">
-<head>
+<html class="js cssanimations" lang="zh"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>捞 - 洛谷</title>
+    <title>编辑器 - 洛谷 | 谔谷杂志</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="renderer" content="webkit">
     <meta name="csrf-token" content="1594294082:nDkt5qulwyunjpqsDYkVWDMPAaE3D6YY+g4nl3DVqeo=">
-        <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/amazeui.min.css"/>
-    <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/katex.min.css"/>
+        <style type="text/css">svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.225em;
+}
+.svg-inline--fa.fa-w-1 {
+  width: 0.0625em;
+}
+.svg-inline--fa.fa-w-2 {
+  width: 0.125em;
+}
+.svg-inline--fa.fa-w-3 {
+  width: 0.1875em;
+}
+.svg-inline--fa.fa-w-4 {
+  width: 0.25em;
+}
+.svg-inline--fa.fa-w-5 {
+  width: 0.3125em;
+}
+.svg-inline--fa.fa-w-6 {
+  width: 0.375em;
+}
+.svg-inline--fa.fa-w-7 {
+  width: 0.4375em;
+}
+.svg-inline--fa.fa-w-8 {
+  width: 0.5em;
+}
+.svg-inline--fa.fa-w-9 {
+  width: 0.5625em;
+}
+.svg-inline--fa.fa-w-10 {
+  width: 0.625em;
+}
+.svg-inline--fa.fa-w-11 {
+  width: 0.6875em;
+}
+.svg-inline--fa.fa-w-12 {
+  width: 0.75em;
+}
+.svg-inline--fa.fa-w-13 {
+  width: 0.8125em;
+}
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+}
+.svg-inline--fa.fa-w-15 {
+  width: 0.9375em;
+}
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-17 {
+  width: 1.0625em;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+.svg-inline--fa.fa-w-19 {
+  width: 1.1875em;
+}
+.svg-inline--fa.fa-w-20 {
+  width: 1.25em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-border {
+  height: 1.5em;
+}
+.svg-inline--fa.fa-li {
+  width: 2em;
+}
+.svg-inline--fa.fa-fw {
+  width: 1.25em;
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: 0.25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+.far.fa-pull-left,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: 0.3em;
+}
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+.far.fa-pull-right,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: 0.3em;
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
+:root .fa-flip-both {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse {
+  color: #fff;
+}</style><link rel="stylesheet" href="https://cdn.luogu.com.cn/css/amazeui.min.css">
+    <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/katex.min.css">
     <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/luogu3.css?ver=20190102">
     <link rel="stylesheet" href="https://cdn.luogu.com.cn/css/highlight_tomorrow.css">
     <link rel="stylesheet" href="https://cdn.luogu.com.cn/markdown-palettes/markdown-palettes.css?ver=20190219">
-    <script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" async="" charset="utf-8" src="https://c.cnzz.com/core.php?web_id=5476811&amp;t=z"></script><script src="https://cdn.luogu.com.cn/js/jquery-2.1.1.min.js"></script>
     <script src="https://cdn.luogu.com.cn/js/luogu3_pre.js?ver=20190101"></script>
 
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen">
     <link rel="stylesheet" href="https://cdn.luogu.com.cn/fe/loader.css?ver=20200706">
     <script>window._feInjection = JSON.parse(decodeURIComponent("%7B%22code%22%3A200%2C%22currentUser%22%3Anull%2C%22currentTemplate%22%3A%22Excited%22%2C%22currentData%22%3A%7B%22shortHeader%22%3Afalse%2C%22pageName%22%3A%22%5Cu8ba8%5Cu8bba%5Cu8be6%5Cu60c5%22%2C%22title%22%3A%22%5Cu635e%22%7D%7D"));window._feConfigVersion=1593530943;</script>
     <script>window._release = '20200706';</script>
-    <script src="https://cdn.luogu.com.cn/fe/loader.js?ver=20200706" charset="utf-8" defer></script>
-</head>
+    <script src="https://cdn.luogu.com.cn/fe/loader.js?ver=20200706" charset="utf-8" defer=""></script>
+<style></style><link rel="stylesheet" type="text/css" href="https://cdn.luogu.com.cn/fe/module.199.5c61010b8a591f2e2965.css"><script charset="utf-8" src="https://cdn.luogu.com.cn/fe/module.199.5c61010b8a591f2e2965.js"></script><style type="text/css">.top-progress[data-v-774e75a0]{position:fixed;right:0;left:0;height:4px;overflow:hidden;z-index:99}.bar[data-v-774e75a0]{height:100%;border-top-right-radius:2px;border-bottom-right-radius:2px;transition:width .2s ease;opacity:1;animation:loading-progress-data-v-774e75a0 10s cubic-bezier(.22,.86,0,.8);animation-fill-mode:forwards}.done[data-v-774e75a0]{animation:none;opacity:0;width:100%;transition:opacity .2s ease .2s}@keyframes loading-progress-data-v-774e75a0{from{width:5%}to{width:99%}}</style><style type="text/css">nav[data-v-27b2cd59]{position:fixed;width:3.7em;height:100%;display:flex;flex-direction:column;text-align:center;line-height:1.2;z-index:5}.logo-wrap[data-v-27b2cd59]{display:block;box-sizing:border-box;padding:1em;width:3.7em;text-align:center;height:4em;overflow:hidden;outline:0}.logo-wrap>img[data-v-27b2cd59]{max-width:100%;max-height:100%}.user-nav[data-v-27b2cd59]{display:none;height:3.4em;align-items:center;background:rgba(255,255,255,.5);border-radius:1em;margin:.3em;padding:0 .8em}</style><style type="text/css">a[data-v-cd9b963e]{display:block;padding:.5em .5em;text-decoration:none}.icon[data-v-cd9b963e]{text-align:center;margin:0 .3em;font-size:1.1em;display:inline-block;width:1.5em;vertical-align:middle}.text[data-v-cd9b963e]{font-size:.8em;vertical-align:middle}</style><style type="text/css">a[data-v-303bbf52]{text-decoration:none}a.color-none[data-v-303bbf52]:hover{text-decoration:none}.color-header[data-v-303bbf52]{color:#bbb}.color-header[data-v-303bbf52]:hover{color:#fff}.color-default[data-v-303bbf52],.color-default-noline[data-v-303bbf52]{color:#3498db}.color-default-noline[data-v-303bbf52]:hover,.color-default[data-v-303bbf52]:hover{color:#0056b3}a.color-default-noline[data-v-303bbf52]:hover{text-decoration:none}.color-title[data-v-303bbf52]{color:#666}.color-title[data-v-303bbf52]:hover{color:#5bc0de}</style><link rel="stylesheet" type="text/css" href="https://cdn.luogu.com.cn/fe/module.222.5c4e3f4f0c83dd49cce8.css"><script charset="utf-8" src="https://cdn.luogu.com.cn/fe/module.222.5c4e3f4f0c83dd49cce8.js"></script><style id="poshytip-css-tip-twitter" type="text/css">div.tip-twitter{visibility:hidden;position:absolute;top:0;left:0;}div.tip-twitter table.tip-table, div.tip-twitter table.tip-table td{margin:0;font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;font-variant:inherit;vertical-align:middle;}div.tip-twitter td.tip-bg-image span{display:block;font:1px/1px sans-serif;height:10px;width:10px;overflow:hidden;}div.tip-twitter td.tip-right{background-position:100% 0;}div.tip-twitter td.tip-bottom{background-position:100% 100%;}div.tip-twitter td.tip-left{background-position:0 100%;}div.tip-twitter div.tip-inner{background-position:-10px -10px;}div.tip-twitter div.tip-arrow{visibility:hidden;position:absolute;overflow:hidden;font:1px/1px sans-serif;}</style><style type="text/css">.header[data-v-52820d90]{color:#fff}h1[data-v-52820d90]{margin-top:.5em;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.bread-crumb[data-v-52820d90]{padding-top:1.5em;font-size:.8em;color:#aaa}.user-nav[data-v-52820d90]{position:absolute;right:4em;top:0;padding:.5em 1em;color:#333;background-color:rgba(255,255,255,.5);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.functional[data-v-52820d90]{padding-top:.8em}.operation[data-v-52820d90]{display:flex;align-items:baseline;color:#fff}.stat[data-v-52820d90]{float:right}@media (max-width:576px){.user-nav[data-v-52820d90]{display:none}.bread-crumb[data-v-52820d90]{font-size:.875em}.stat[data-v-52820d90]{float:left}.functional[data-v-52820d90]{display:flex;flex-direction:column;padding-top:0}.operation[data-v-52820d90]{margin-top:1em;margin-bottom:1em;display:flex;flex-direction:column}.operation>*[data-v-52820d90]{width:100%;margin-bottom:.5em}}</style><style type="text/css">nav[data-v-019a82aa]::after{content:" ";white-space:pre}.link[data-v-019a82aa],.text[data-v-019a82aa]{color:rgba(255,255,255,.75)}.link[data-v-019a82aa]:hover{color:rgba(255,255,255,1)}</style></head>
 <body>
-<div id="app"></div>
+<div data-v-27cf0bac="" id="app" class="lfe-vars"><div data-v-774e75a0="" data-v-27cf0bac="" class="top-progress"><div data-v-774e75a0="" class="bar done" style="background: rgb(52, 152, 219);"></div></div> <nav data-v-27b2cd59="" data-v-77e9f74d="" data-v-27cf0bac="" class="lfe-body" style="background-color: rgb(52, 73, 94); color: rgb(221, 221, 221);"><div data-v-27b2cd59="" style="background-color: rgb(52, 152, 219);"><a data-v-27b2cd59="" href="/" class="logo-wrap"><img data-v-27b2cd59="" src="https://cdn.luogu.com.cn/fe/logo-single.png?98632e1daed253842bc0846d56f869e3" alt="Luogu"></a></div>  <div data-v-77e9f74d="" data-v-27b2cd59="" class="popup-button">
+      应用 <svg data-v-77e9f74d="" data-v-27b2cd59="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-angle-double-right fa-w-14"><path data-v-77e9f74d="" data-v-27b2cd59="" fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z" class=""></path></svg> <!----></div> <a data-v-303bbf52="" data-v-cd9b963e="" data-v-77e9f74d="" href="/" colorscheme="none" class="color-none" data-v-27b2cd59="" style="color: inherit;"><span data-v-cd9b963e="" data-v-303bbf52="" class="icon"><svg data-v-cd9b963e="" data-v-303bbf52="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-book fa-w-14"><path data-v-cd9b963e="" data-v-303bbf52="" fill="currentColor" d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z" class=""></path></svg></span> <span data-v-cd9b963e="" data-v-303bbf52="" class="text">
+      题库
+    </span></a> <a data-v-303bbf52="" data-v-cd9b963e="" data-v-77e9f74d="" href="/" colorscheme="none" class="color-none" data-v-27b2cd59="" style="color: inherit;"><span data-v-cd9b963e="" data-v-303bbf52="" class="icon"><svg data-v-cd9b963e="" data-v-303bbf52="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="clipboard-list-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-clipboard-list-check fa-w-12"><path data-v-cd9b963e="" data-v-303bbf52="" fill="currentColor" d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zM65.6 209.4l12.7-12.6c2.1-2.1 5.5-2.1 7.6 0l20.6 20.8 47.6-47.2c2.1-2.1 5.5-2.1 7.6 0l12.6 12.7c2.1 2.1 2.1 5.5 0 7.6l-64.2 63.6c-2.1 2.1-5.5 2.1-7.6 0L65.6 217c-2.1-2.1-2.1-5.5 0-7.6zM96 392c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm224-16c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-128c0 4.4-4.3 8-9.6 8H154.1l32.3-32h124c5.3 0 9.6 3.6 9.6 8v16z" class=""></path></svg></span> <span data-v-cd9b963e="" data-v-303bbf52="" class="text">
+      题单
+    </span></a> <a data-v-303bbf52="" data-v-cd9b963e="" data-v-77e9f74d="" href="/" colorscheme="none" class="color-none" data-v-27b2cd59="" style="color: inherit;"><span data-v-cd9b963e="" data-v-303bbf52="" class="icon"><svg data-v-cd9b963e="" data-v-303bbf52="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="signal" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-signal fa-w-20"><path data-v-cd9b963e="" data-v-303bbf52="" fill="currentColor" d="M216 288h-48c-8.84 0-16 7.16-16 16v192c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V304c0-8.84-7.16-16-16-16zM88 384H40c-8.84 0-16 7.16-16 16v96c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16v-96c0-8.84-7.16-16-16-16zm256-192h-48c-8.84 0-16 7.16-16 16v288c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V208c0-8.84-7.16-16-16-16zm128-96h-48c-8.84 0-16 7.16-16 16v384c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V112c0-8.84-7.16-16-16-16zM600 0h-48c-8.84 0-16 7.16-16 16v480c0 8.84 7.16 16 16 16h48c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16z" class=""></path></svg></span> <span data-v-cd9b963e="" data-v-303bbf52="" class="text">
+      比赛
+    </span></a> <!----> <a data-v-303bbf52="" data-v-cd9b963e="" data-v-77e9f74d="" href="/discuss/lists" colorscheme="none" class="color-none" data-v-27b2cd59="" style="color: inherit;"><span data-v-cd9b963e="" data-v-303bbf52="" class="icon"><svg data-v-cd9b963e="" data-v-303bbf52="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-comments fa-w-18"><path data-v-cd9b963e="" data-v-303bbf52="" fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z" class=""></path></svg></span> <span data-v-cd9b963e="" data-v-303bbf52="" class="text">
+      讨论
+    </span></a></nav> <div data-v-27cf0bac="" class="main-container"><div data-v-7958fe72="" data-v-27cf0bac="" class="wrapper wrapped lfe-body header-layout narrow"><div data-v-7958fe72="" class="background" style="background: linear-gradient(90deg, rgb(35, 37, 38), rgb(65, 67, 69)); filter: blur(0px) brightness(100%);"></div> <div data-v-52820d90="" data-v-27cf0bac="" class="header" currentdata="[object Object]" data-v-7958fe72=""><div data-v-52820d90="" class="user-nav"><nav data-v-1bdb8ce2="" data-v-52820d90=""><div data-v-034eb354="" data-v-1bdb8ce2=""><div data-v-034eb354="" class="search-wrap"><input data-v-034eb354="" type="text"></div> <a data-v-303bbf52="" data-v-034eb354="" href="javascript:void 0" colorscheme="none" class="icon color-none"><svg data-v-034eb354="" data-v-303bbf52="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16"><path data-v-034eb354="" data-v-303bbf52="" fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg></a></div> <a data-v-303bbf52="" data-v-1bdb8ce2="" href="/" colorscheme="none" class="login color-none"><span data-v-1bdb8ce2="" data-v-303bbf52="">登录</span></a> <a data-v-303bbf52="" data-v-1bdb8ce2="" href="/" colorscheme="none" class="login color-none"><span data-v-1bdb8ce2="" data-v-303bbf52="">注册</span></a> <img data-v-1bdb8ce2="" src="https://cdn.luogu.com.cn/upload/usericon/1.png" class="avatar"></nav></div> <nav data-v-019a82aa="" data-v-52820d90="" class="lfe-caption bread-crumb"></nav> <h1 data-v-52820d90="" class="lfe-h1">编辑器</h1> <div data-v-52820d90="" class="functional"><div data-v-52820d90="" class="stat"></div> <div data-v-52820d90="" class="operation"></div></div></div></div> <main data-v-27cf0bac="" class="lfe-body" style="background-color: rgb(239, 239, 239);"><!----><div id="app-old">
+
+
+
+
+
+                            <div class="lg-article" id="replyarea">
+                                        <div style="height: 500px;">
+                        <div data-v-aa62436e=""><div data-v-6d5597b1="" data-v-aa62436e="" class="mp-editor-container"><div data-v-6d5597b1="" class="mp-editor-toolbar"><ul data-v-6d5597b1="" class="mp-editor-menu"><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="粗体" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-bold"></i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="删除线" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-strikethrough"></i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="斜体" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-italic"></i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="分割线" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-minus"></i></a></li><li data-v-6d5597b1="" class="mp-divider"><span data-v-6d5597b1="">|</span></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="一级标题" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa icon-blold">H1</i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="二级标题" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa icon-blold">H2</i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="三级标题" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa icon-blold">H3</i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="四级标题" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa icon-blold">H4</i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="五级标题" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa icon-blold">H5</i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="六级标题" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa icon-blold">H6</i></a></li><li data-v-6d5597b1="" class="mp-divider"><span data-v-6d5597b1="">|</span></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="无序列表" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-list-ul"></i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="有序列表" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-list-ol"></i></a></li><li data-v-6d5597b1="" class="mp-divider"><span data-v-6d5597b1="">|</span></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="插入图片" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-image"></i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="插入链接" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-link"></i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="插入代码" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-code"></i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="插入表格" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-table"></i></a></li><li data-v-6d5597b1="" class="mp-divider"><span data-v-6d5597b1="">|</span></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="隐藏预览" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-eye"></i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="全屏" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-expand-arrows-alt"></i></a></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="停用滚动同步" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-lock"></i></a></li><li data-v-6d5597b1="" class="mp-divider"><span data-v-6d5597b1="">|</span></li><li data-v-6d5597b1="" class=""><a data-v-6d5597b1="" title="关于" unselectable="on"><i data-v-6d5597b1="" unselectable="on" class="fa fa-info-circle"></i></a></li></ul></div><div data-v-6d5597b1="" class="mp-editor-ground"><div data-v-6d5597b1="" class="mp-editor-zone mp-input-zone mp-editor-zone"><div data-v-6d5597b1="" class="mp-input-area"><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 34px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -16px; border-right-width: 14px; min-height: 32px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style="text-rendering: auto;"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 14px; width: 1px; border-bottom: 0px solid transparent; top: 32px;"></div><div class="CodeMirror-gutters" style="height: 46px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></div></div><div data-v-6d5597b1="" class="mp-editor-zone mp-preview-zone mp-editor-zone"><div data-v-6d5597b1="" class="mp-preview-area"><div data-v-6d5597b1="" class="mp-preview-content"></div></div></div></div><div data-v-6d5597b1=""><!----></div></div></div>
+                    </div>
+
+                                            <input name="verify" type="hidden">
+                                        <br>
+                    
+                </div>
+                    </div></main> <div data-v-7958fe72="" data-v-27cf0bac="" class="wrapper wrapped lfe-body"><div data-v-7958fe72="" class="background" style="background: rgb(51, 51, 51); filter: blur(0px) brightness(100%);"></div> <div data-v-9e66f930="" data-v-27cf0bac="" class="footer" data-v-7958fe72=""><img data-v-9e66f930="" src="https://cdn.luogu.com.cn/fe/logo-single.png?98632e1daed253842bc0846d56f869e3" class="logo-img"> <div data-v-9e66f930="" class="slogan">
+    在洛谷，<br data-v-9e66f930="">
+    享受Coding的欢乐
+  </div> <img data-v-9e66f930="" src="https://cdn.luogu.com.cn/fe/wechat_qr.png?7d31ea4ac6fd9b382a80b3ed4a1d69cf" class="qr-img"> <div data-v-9e66f930="" class="info"><p data-v-9e66f930=""><a data-v-303bbf52="" data-v-9e66f930="" href="/blog/luogu/about-luogu" colorscheme="default" class="color-default">
+        关于洛谷
+      </a> |
+      <a data-v-303bbf52="" data-v-9e66f930="" href="/blog/luogu/luogu-help" colorscheme="default" class="color-default">
+        帮助中心
+      </a> |
+      <a data-v-303bbf52="" data-v-9e66f930="" href="/blog/luogu/luogu-EULA" colorscheme="default" class="color-default">
+        用户协议
+      </a> |
+      <a data-v-303bbf52="" data-v-9e66f930="" href="/blog/luogu/contact-us" colorscheme="default" class="color-default">
+        联系我们
+      </a> <br data-v-9e66f930=""> <a data-v-303bbf52="" data-v-9e66f930="" href="/discuss/lists?forumname=miaomiaowu" colorscheme="default" class="color-default">
+        小黑屋
+      </a> |
+      <a data-v-303bbf52="" data-v-9e66f930="" href="/judgement" colorscheme="default" class="color-default">
+        陶片放逐
+      </a> |
+      <a data-v-303bbf52="" data-v-9e66f930="" href="/blog/luogu/social-rules" colorscheme="default" class="color-default">
+        社区规则
+      </a> |
+      <a data-v-303bbf52="" data-v-9e66f930="" href="https://www.lagou.com/gongsi/369082.html" target="_blank" colorscheme="default" class="color-default">
+        招贤纳才
+      </a> <br data-v-9e66f930="">
+
+      2013-2020 , © 洛谷
+      Developed by the
+      <a data-v-303bbf52="" data-v-9e66f930="" href="https://github.com/luogu-dev" target="_blank" colorscheme="default" class="color-default">
+        Luogu Dev Team
+      </a> <br data-v-9e66f930="">
+
+      增值电信业务经营许可证 沪B2-20200477
+      <br data-v-9e66f930=""> <a data-v-303bbf52="" data-v-9e66f930="" href="http://beian.miit.gov.cn" target="_blank" colorscheme="default" class="color-default">
+        沪ICP备18008322号
+      </a>
+      All rights reserved.
+      </p></div></div></div></div></div>
 <script>
     function scrollToId (id) {
         $('html, body').animate({
@@ -49,23 +559,8 @@
     }
 
 </style>
-<div id="app-old">
 
 
-
-
-
-                            <div class="lg-article" id="replyarea">
-                                        <div style="height: 500px;">
-                        <div id="editor-new"></div>
-                    </div>
-
-                                            <input name='verify' type="hidden"/>
-                                        <span class="lg-small">希望更丰富的展现？<a data-pjax href="/blog/luogu/how-to-use-markdown">使用Markdown</a></span><br>
-                    <a class="am-btn am-btn-danger" id="submit-reply" data-postid="174936">发表回复</a>
-                </div>
-                    </div>
-</div>
 
 <div class="am-modal am-modal-prompt" tabindex="-1" id="report">
     <div class="am-modal-dialog">
@@ -73,18 +568,18 @@
         <div class="am-modal-bd">
             如果你认为某个帖子没问题，欢迎向洛谷反馈，以坑更多的同学。
             <br><br>
-            <select data-am-selected="{ btnStyle: 'secondary'}" name="reason">
+            <select data-am-selected="{ btnStyle: 'secondary'}" name="reason" style="display: none;">
                 <option value="友善内容">非辱骂与友善内容</option>
                 <option value="有意义内容">可以令人理解的有意义内容</option>
                 <option value="合法内容">合法内容与无害信息</option>
                 <option value="其他">其他原因（请解释）</option>
-            </select><br><br>
+            </select><div class="am-selected am-dropdown " id="am-selected-hqppi" data-am-dropdown="">  <button type="button" class="am-selected-btn am-btn am-dropdown-toggle am-btn-secondary">    <span class="am-selected-status am-fl">非辱骂与友善内容</span>    <i class="am-selected-icon am-icon-caret-down"></i>  </button>  <div class="am-selected-content am-dropdown-content">    <h2 class="am-selected-header"><span class="am-icon-chevron-left">返回</span></h2>       <ul class="am-selected-list">                     <li class="am-checked" data-index="0" data-group="0" data-value="友善内容">         <span class="am-selected-text">非辱骂与友善内容</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="1" data-group="0" data-value="有意义内容">         <span class="am-selected-text">可以令人理解的有意义内容</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="2" data-group="0" data-value="合法内容">         <span class="am-selected-text">合法内容与无害信息</span>         <i class="am-icon-check"></i></li>                                 <li class="" data-index="3" data-group="0" data-value="其他">         <span class="am-selected-text">其他原因（请解释）</span>         <i class="am-icon-check"></i></li>            </ul>    <div class="am-selected-hint"></div>  </div></div><br><br>
             请具体说明理由，以增加反馈的可信度。
             <input type="text" class="am-modal-prompt-input" name="content">
         </div>
         <div class="am-modal-footer">
-            <span class="am-modal-btn" data-am-modal-cancel>yes</span>
-            <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+            <span class="am-modal-btn" data-am-modal-cancel="">yes</span>
+            <span class="am-modal-btn" data-am-modal-confirm="">确定</span>
         </div>
     </div>
 </div>
@@ -185,7 +680,7 @@
 </script>
 
 
-</div>
+
 
 <div class="am-modal am-modal-alert" tabindex="-1" id="lg-alert">
     <div class="am-modal-dialog">
@@ -199,8 +694,8 @@
 
 <script src="/js/ace/ace.js"></script>
 
-<script src="https://cdn.luogu.com.cn/js/vendor.js" data-manual></script>
-<script src="https://cdn.luogu.com.cn/js/jsmind.js" data-manual></script>
+<script src="https://cdn.luogu.com.cn/js/vendor.js" data-manual=""></script>
+<script src="https://cdn.luogu.com.cn/js/jsmind.js" data-manual=""></script>
 <!--
 <script src="https://cdn.luogu.com.cn/js/ajaxfileupload.js" data-manual></script>
 <script src="https://cdn.luogu.com.cn/js/jquery.pjax.js" data-manual></script>
@@ -217,5 +712,6 @@
 <script src="https://cdn.luogu.com.cn/js/luogu3.js?ver=20190724"></script>
 
 <!--script src="//www.recaptcha.net/recaptcha/api.js?hl=zh-CN&render=explicit&onload=renderCaptcha" async defer></script-->
-</body>
-</html>
+
+
+<script src="https://s23.cnzz.com/z_stat.php?id=5476811&amp;web_id=5476811"></script></body></html>
